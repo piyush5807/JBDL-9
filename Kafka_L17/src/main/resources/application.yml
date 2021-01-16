@@ -1,0 +1,18 @@
+logging:
+  level:
+    org:
+      springframework: DEBUG
+      springframework.kafka: DEBUG
+
+spring:
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      auto-offset-reset: earliest
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      group-id: hi
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
